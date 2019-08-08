@@ -22,11 +22,11 @@ x = tf.placeholder(tf.float32, [None, 784]) # mnist data image of shape 28*28=78
 y = tf.placeholder(tf.float32, [None, 10]) # 0-9 digits recognition => 10 classes
 
 # Set model weights
-W1 = tf.Variable(tf.zeros([784, 64]))
-W2 = tf.Variable(tf.zeros([64, 10]))
+# W1 = tf.Variable(tf.zeros([784, 64]))
+# W2 = tf.Variable(tf.zeros([64, 10]))
 ##how about try random initializing??
-# W1 = tf.Variable(tf.random.normal([784, 64], stddev=.02))
-# W2 = tf.Variable(tf.random.normal([64, 10], stddev=.02))
+W1 = tf.Variable(tf.random.normal([784, 64], stddev=.02))
+W2 = tf.Variable(tf.random.normal([64, 10], stddev=.02))
 b1 = tf.Variable(tf.zeros([64]))
 b2 = tf.Variable(tf.zeros([10]))
 
